@@ -21,3 +21,6 @@ use Ctrl-C in the commmand prompt
 Create a new Django App:
 django-admin startapp [app name]
 
+---------------------------------------------
+Install pillow: (this is python, or pip. Not Django)
+pip install pillow
