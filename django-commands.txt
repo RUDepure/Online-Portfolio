@@ -16,3 +16,8 @@ python manage.py runserver
 ---------------------------------------------
 Stop Server:
 use Ctrl-C in the commmand prompt
+
+---------------------------------------------
+Create a new Django App:
+django-admin startapp [app name]
+
