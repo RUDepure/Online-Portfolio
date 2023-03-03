@@ -24,3 +24,7 @@ django-admin startapp [app name]
 ---------------------------------------------
 Install pillow: (this is python, or pip. Not Django)
 pip install pillow
+
+---------------------------------------------
+Install Decouple (helps use .env file to hide sensitive information)
+pip install python-decouple
