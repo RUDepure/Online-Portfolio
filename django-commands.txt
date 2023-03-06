@@ -1,3 +1,6 @@
+Based off of this course:
+https://www.linkedin.com/learning/building-a-personal-portfolio-with-django/creating-a-website-with-python?autoplay=true&resume=false
+
 Windows:
 dir = ls
 
@@ -28,3 +31,8 @@ pip install pillow
 ---------------------------------------------
 Install Decouple (helps use .env file to hide sensitive information)
 pip install python-decouple
+
+---------------------------------------------
+Install the Code that helps us to connect to postgres
+pip install psycopg2
+
