@@ -20,6 +20,7 @@ import jobs.views
 
 #implemented the home path
 urlpatterns = [
+    # url in which we login with our admin users
     path('admin/', admin.site.urls),
     #sends them to the views file and looks at the home function
     path('', jobs.views.home, name = 'home'),
