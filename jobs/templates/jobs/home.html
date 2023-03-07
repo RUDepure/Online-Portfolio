@@ -1,1 +1,12 @@
-Hello World!
+<h1>All my jobs</h1>
+
+<!--
+Special code that isn't Python or HTML.
+This will loop through the list of jobs we passed in the views.py code
+-->
+
+{% for job in jobs.all %}
+
+{{ job.summary }}
+
+{% endfor %}
