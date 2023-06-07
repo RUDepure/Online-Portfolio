@@ -58,3 +58,7 @@ python manage.py createsuperuser
 Searches through the Django project for a folder called static were it needs to add to the collective static
 python manage.py collectstatic
 
+-------------------------------------------------
+install popper in project:
+npm i @popperjs/core
+
