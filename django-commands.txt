@@ -51,5 +51,10 @@ python manage.py migrate
 ---------------------------------------------
 Create a super user, to use as admin in our project
 python manage.py createsuperuser
+
 (set user and password, you can skip email)
+
+---------------------------------------------
+Searches through the Django project for a folder called static were it needs to add to the collective static
+python manage.py collectstatic
 
