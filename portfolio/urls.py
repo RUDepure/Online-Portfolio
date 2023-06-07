@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 #imported jobs views
 import jobs.views
+from django.conf import settings #imported the settings we are going to use
+from django.conf.urls.static import static #imported the settings we defined for our static url
 
 #implemented the home path
 urlpatterns = [
@@ -24,4 +26,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #sends them to the views file and looks at the home function
     path('', jobs.views.home, name = 'home'),
-]
+] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #We define the root for the static files we defined in settings
