@@ -17,3 +17,7 @@ class Job(models.Model):
     # CharField that is data saved as text
     # It has a maximum number of characters of 200
     summary = models.CharField(max_length = 200)
+
+    # Makes the job summaries to become their names in the database
+    def __str__(self):
+        return self.summary

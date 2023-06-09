@@ -26,4 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #sends them to the views file and looks at the home function
     path('', jobs.views.home, name = 'home'),
-] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #We define the root for the static files we defined in settings
+    path('jobs/<job_id>', jobs.view.detail, name='detail'), #We specify the root for each job page using their id
+] 
+urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #We define the root for the static files we defined in settings
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

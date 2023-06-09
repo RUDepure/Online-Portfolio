@@ -3,8 +3,13 @@ from django.shortcuts import render
 from .models import Job
 
 # Create your views here.
-#Django needs a Templates Folder in which we store our html files
+# Django needs a Templates Folder in which we store our html files
 def home(request):
     jobs = Job.objects
     #renders the html file inside templates/jobs folder
     return render(request, 'jobs/home.html', {'jobs': jobs}) #this render passes the Job model's objects as a list to home.html
+
+# Function made to return the detailed page of each job
+def detail(request, job_id):
+    print(job_id)
+    return render(request, 'jobs/home.html') 
