@@ -144,7 +144,7 @@
       {% for job in jobs.all %}
 
         <div class="col-md-4">
-          <a href="{}">
+          <a href="{% url 'detail' job.id %}"> <!--Passes to the detail view the current id in our jobs loop to access that specific url-->
           <div class="card shadow-sm">
             <!-- investigar que es "svg" despues -->
             <img class="bd-placeholder-img card-img-top" width="100%" height="225" src = "{{ job.image.url }}">
