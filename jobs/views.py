@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 # Import our Job model to be able to display it in our site
 from .models import Job
 
@@ -11,5 +11,5 @@ def home(request):
 
 # Function made to return the detailed page of each job
 def detail(request, job_id):
-    print(job_id)
-    return render(request, 'jobs/home.html') 
+    job_detail = get_object_or_404(Job, pk=job_id)
+    return render(request, 'jobs/detail.html', {'job':job_detail}) 
