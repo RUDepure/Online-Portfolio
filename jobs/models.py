@@ -1,4 +1,5 @@
 from django.db import models
+from embed_video.fields  import  EmbedVideoField
 #https://www.linkedin.com/learning/building-a-personal-portfolio-with-django/creating-the-models-in-django?autoSkip=true&autoplay=true&resume=false
 
 # Create your models here.
@@ -18,6 +19,13 @@ class Job(models.Model):
     # It has a maximum number of characters of 200
     summary = models.CharField(max_length = 200)
 
+    detailed_description = models.TextField(default="default description")
+    project_video = EmbedVideoField(default=None, blank=True, null=True)
+    
+    class  Meta:
+          verbose_name_plural = "Jobs and Projects"
+		
     # Makes the job summaries to become their names in the database
     def __str__(self):
-        return self.summary
+        return self.summary if  self.summary  else  " "
+    
