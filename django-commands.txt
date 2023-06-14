@@ -74,7 +74,24 @@ user: nitro
 Searches through the Django project for a folder called static were it needs to add to the collective static
 python manage.py collectstatic
 
+To clear previous modified static files:
+python manage.py collectstatic --noinput --clear
+
+--Clear browser cache
+--Add a random string after the JavaScript file include, e.g. jquery.js?rand=23423423, with each load.
+
 -------------------------------------------------
 install popper in project:
 npm i @popperjs/core
+
+-------------------------------------------------
+For video formats:
+{% video job.project_video 'medium' %}
+
+tiny (420x315)
+small (480x360)
+medium (640x480)
+large (960x720)
+huge (1280x960)
+custom: '600x400'
 
