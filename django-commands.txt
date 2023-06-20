@@ -85,6 +85,9 @@ install popper in project:
 npm i @popperjs/core
 
 -------------------------------------------------
+Videos:
+https://www.section.io/engineering-education/integrating-youtube-videos-into-a-django-application/
+
 For video formats:
 {% video job.project_video 'medium' %}
 

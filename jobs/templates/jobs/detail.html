@@ -27,9 +27,9 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Job Detail</h1>
-        <p class="lead text-muted">{{job.detailed_description}}</p>
+        <h1 class="fw-light">{{job.title}}</h1>
         <img src="{{ job.image.url  }}" height=280></img> <!-- Uses one of the static files we loaded, in this case, our prof pic -->
+        <p class="lead text-muted">{{job.detailed_description|linebreaks}}</p>
         {% video job.project_video 'medium' %}
         <p>
             <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
