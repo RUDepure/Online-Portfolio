@@ -41,3 +41,22 @@ class Job(models.Model):
     def __str__(self):
         return self.title if  self.title  else  " "
     
+class Education(models.Model):
+    
+    school = models.CharField(max_length = 200, null=False, default="placeholder") 
+    title = models.CharField(max_length = 200, null=False, default="placeholder")
+    detailed_description = models.TextField(null=False, default="placeholder")
+    
+    #We are using a char field for date since we also want the option to specify is it is currently ongoing or on hold
+    #Format we use: DD/MM/YYYY - DD/MM/YYYY  OR   DD/MM/YYYY - Ongoing/On Hold
+    period = models.CharField(max_length = 36, default="DD/MM/YYYY")
+    image = models.ImageField(upload_to = 'images/', null=False)
+    site = models.CharField(max_length = 200, null=True)
+    
+    class  Meta:
+          verbose_name_plural = "Education"
+		
+    # Makes the school names to become their names in the database
+    def __str__(self):
+        return self.school if  self.school  else  " "
+    

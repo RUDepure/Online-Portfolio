@@ -15,6 +15,7 @@
 
     <!-- Loads Bootstrap -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> <!--Added reference to the static file of the bootstrap stylesheet -->
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet"> <!--Added reference to the static file of the bootstrap stylesheet -->
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -82,89 +83,165 @@
     
   </head>
   <body>
-<!--    
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
--->
 
 <main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Ruben Hernandez</h1>
-        <p class="lead text-muted">Welcome to my Website. I am Ruben, I am currently looking to develop Machine Learning and Video Game Projects. Nice to meet you.</p>
-        <img src="{% static 'ruben.jpg' %}" height=360></img> <!-- Uses one of the static files we loaded, in this case, our prof pic -->
-        <p>
-          <a href="mailto:rahernandezgon@gmail.com" class="btn btn-primary my-2">Contact Me</a>
-          <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> Loads Bootstrap -->
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
+  <section class="bg-light">
     <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        
-      <!--
-      Special code that isn't Python or HTML.
-      This will loop through the list of jobs we passed in the views.py code
-      -->
-      {% for job in jobs.all %}
-
-        <div class="col-md-4">
-          <a href="{% url 'detail' job.id %}"> <!--Passes to the detail view the current id in our jobs loop to access that specific url-->
-          <div class="card shadow-sm">
-            <!-- investigar que es "svg" despues -->
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src = "{{ job.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-              <!-- <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="card card-style1 border-0">
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 mb-4 mb-lg-0">
+                                <img src="{% static 'ruben.jpg' %}" height=360 alt="...">
+                            </div>
+                            <div class="col-lg-6 px-xl-10">
+                                <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                    <h3 class="h2 text-white mb-0">Rubén Alejandro Hernández González</h3>
+                                    <span class="text-primary">Software Developer</span>
+                                </div>
+                                <ul class="list-unstyled mb-1-9">
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">IT Experience:</span> 4  Years</li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span><a href="mailto:rahernandezgon@gmail.com">rahernandezgon@gmail.com</a></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">LinkedIn:</span> <a href="https://www.linkedin.com/in/rubenhernandezgon/">linkedin.com/in/rubenhernandezgon</a></li>
+                                    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Github:</span> <a href="https://github.com/RUDepure">https://github.com/RUDepure</a></li>
+                                    <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Phone:</span> +52 81 8088 5799</li>
+                                </ul>
+                                <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                    <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                    <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                    <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <small class="text-muted">9 mins</small>
-              </div> -->
             </div>
-          </div>
-        </a>
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div>
+                    <span class="section-title text-primary mb-3 mb-sm-4">About Me</span>
+                    <p class="mb-0"> - Software Developer and Support Engineer with experience providing support 
+                      to various clients in Oracle Retail Systems using Oracle SQL and Unix. I have development experience 
+                      y software and web departments.<br><br></p>
+
+                      <p class="mb-0"> -Strong engineering professional with a Bachelor on Computer 
+                        Science from Instituto Tecnológico y de Estudios Superiores de Monterrey.<br><br></p>
+
+                      <p class="mb-0">- Initiated the support team in Logic Information Systems' Monterrey, 
+                        Mexico Branch and was responsible to provide support to our most active client for 2 consecutive years.<br><br></p>
+
+                      <p class="mb-0"> Technical Skillset:<br>
+                        Languages: Java, JavaScript, C, C#, C++, SQL, HTML, CSS, Python, Oracle SQL.<br><br></p>
+                        
+                        <p class="mb-0"> Frameworks: jQuery, Bootstrap, Django<br><br></p>
+
+                      <p class="mb-0"> Proficiencies: Data Structures and Algorithms, Git, Unit Testing, MySQL, JSON, 
+                        Problem Solving Skills, Night Shift Experience, Support Consultant Experience, Sharing Knowledge 
+                        with my Coworkers.</p>
+                </div>
+            </div>
+            <!-- <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-12 mb-4 mb-sm-5">
+                        <div class="mb-4 mb-sm-5">
+                            <span class="section-title text-primary mb-3 mb-sm-4">Skills</span>
+                            <div class="progress-text">
+                                <div class="row">
+                                    <div class="col-6">Driving range</div>
+                                    <div class="col-6 text-end">80%</div>
+                                </div>
+                            </div>
+                            <div class="custom-progress progress progress-medium mb-3" style="height: 4px;">
+                                <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
+                            </div>
+                            <div class="progress-text">
+                                <div class="row">
+                                    <div class="col-6">Short Game</div>
+                                    <div class="col-6 text-end">90%</div>
+                                </div>
+                            </div>
+                            <div class="custom-progress progress progress-medium mb-3" style="height: 4px;">
+                                <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                            </div>
+                            <div class="progress-text">
+                                <div class="row">
+                                    <div class="col-6">Side Bets</div>
+                                    <div class="col-6 text-end">50%</div>
+                                </div>
+                            </div>
+                            <div class="custom-progress progress progress-medium mb-3" style="height: 4px;">
+                                <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                            </div>
+                            <div class="progress-text">
+                                <div class="row">
+                                    <div class="col-6">Putting</div>
+                                    <div class="col-6 text-end">60%</div>
+                                </div>
+                            </div>
+                            <div class="custom-progress progress progress-medium" style="height: 4px;">
+                                <div class="animated custom-bar progress-bar slideInLeft bg-secondary" style="width:60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                            </div>
+                        </div> -->
+                        
+                        <div>
+                            <span class="section-title text-primary mb-3 mb-sm-4">Education</span>
+                            {% for edu in education.all %}
+                              <div class="row align-items-center">
+                                <div class="col-lg-4 mb-4 mb-lg-0">
+                                    <img src="{{ edu.image.url }}" height=300 width=360 alt="...">
+                                </div>
+                                <div class="col-lg-8 px-xl-10">
+                                    <div class="bg-secondary2 d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                        <h3 class="h3 text-white mb-0">{{ edu.school }}</h3>
+                                        <span class="text-primary">{{ edu.title }}</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-1-9">
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary2 me-2 font-weight-600">Period:</span> {{ edu.period }}</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary2 me-2 font-weight-600">Site:</span><a href="{{ edu.site }}">{{ edu.site }}</a></li>
+                                    </ul>
+                                    <p class="mb-0">{{ edu.detailed_description|linebreaks }}</p>
+                                </div>
+                            </div>
+                            <br>
+                            {% endfor %}
+                        </div>
+
+                        <div>
+                          <span class="section-title text-primary mb-3 mb-sm-4">Jobs and Projects</span>
+                            <div class="album py-5 bg-light">
+                              <div class="container">
+                          
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                  
+                                {% for job in jobs.all %}
+                          
+                                  <div class="col-md-4">
+                                    <a href="{% url 'detail' job.id %}"> <!--Passes to the detail view the current id in our jobs loop to access that specific url-->
+                                    <div class="card shadow-sm">
+                                      <!-- investigar que es "svg" despues -->
+                                      <img class="bd-placeholder-img card-img-top" width="100%" height="225" src = "{{ job.image.url }}">
+                                      <div class="card-body">
+                                        <p class="card-text">{{ job.summary }}</p>
+                                    
+                                      </div>
+                                    </div>
+                                  </a>
+                                  </div>
+                                  {% endfor %}
+                                </div>
+                              </div>
+                            </div>
+
+                      </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-        {% endfor %}
-      </div>
     </div>
-  </div>
+</section>
 
 </main>
 

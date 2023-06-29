@@ -1,6 +1,9 @@
 Based off of this course:
 https://www.linkedin.com/learning/building-a-personal-portfolio-with-django/creating-a-website-with-python?autoplay=true&resume=false
 
+Template:
+https://bootdey.com/snippets/view/user-about-me-section
+
 Next Steps:
 Check out djangoproject.com
 Class based views
@@ -68,7 +71,7 @@ Create a super user, to use as admin in our project
 python manage.py createsuperuser
 
 (set user and password, you can skip email)
-user: nitro
+user: --------
 
 ---------------------------------------------
 Searches through the Django project for a folder called static were it needs to add to the collective static
