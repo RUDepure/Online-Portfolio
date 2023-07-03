@@ -94,7 +94,7 @@
                     <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
                         <div class="row align-items-center">
                             <div class="col-lg-5 mb-4 mb-lg-0">
-                                <img src="{% static 'ruben.jpg' %}" height=360 alt="...">
+                                <img src="{% static 'ruben.jpg' %}" class = "img-responsive" height=360 alt="...">
                             </div>
                             <div class="col-lg-6 px-xl-10">
                                 <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
@@ -190,7 +190,7 @@
                             {% for edu in education.all %}
                               <div class="row align-items-center">
                                 <div class="col-lg-4 mb-4 mb-lg-0">
-                                    <img src="{{ edu.image.url }}" height=300 width=360 alt="...">
+                                    <img src="{{ edu.image.url }}" class = "img-responsive" height=300 width=360 alt="...">
                                 </div>
                                 <div class="col-lg-8 px-xl-10">
                                     <div class="bg-secondary2 lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
@@ -236,6 +236,20 @@
                             </div>
 
                       </div>
+
+                      <div>
+                        <div>
+                          <span class="section-title text-primary mb-3 mb-sm-4">Other Information</span>
+                          <h3 class="h3 text-secondary mb-0">Languages</h3>
+                          <ul class="list-unstyled mb-1-9">
+                            <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"> Spanish:</span> Native Speaker</li>
+                            <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"> English:</span> Fluent | <a href="{% static 'IELTS Score - Ruben Hernandez - 21-01-2023.pdf' %}">IELTS Overall Score: 7.5</a></li>
+                            <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600"> Japanese:</span> Basic Knowledge</li>
+                          </ul>                      
+                        </div>
+
+                    </div>
+
                         
                     </div>
                 </div>
