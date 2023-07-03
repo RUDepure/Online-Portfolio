@@ -193,13 +193,14 @@
                                     <img src="{{ edu.image.url }}" height=300 width=360 alt="...">
                                 </div>
                                 <div class="col-lg-8 px-xl-10">
-                                    <div class="bg-secondary2 d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                    <div class="bg-secondary2 lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
                                         <h3 class="h3 text-white mb-0">{{ edu.school }}</h3>
                                         <span class="text-primary">{{ edu.title }}</span>
+                                    </br>
+                                        <span class="text-primary"><a href="{{ edu.site }}">{{ edu.site }}</a></span>
                                     </div>
                                     <ul class="list-unstyled mb-1-9">
                                         <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary2 me-2 font-weight-600">Period:</span> {{ edu.period }}</li>
-                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary2 me-2 font-weight-600">Site:</span><a href="{{ edu.site }}">{{ edu.site }}</a></li>
                                     </ul>
                                     <p class="mb-0">{{ edu.detailed_description|linebreaks }}</p>
                                 </div>
