@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 #Included decouple to hide sensitive information from my repositories
 from decouple import config
+import dj_database_url #configuration to connect to cloud database
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,15 +80,21 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Configured our project with our postgres DB credentials, so it can connect to it
 # Configured our credentials access through our .env file
+# DATABASES = {
+#     'default': {
+#         'ENGINE': config('DB_ENGINE'),
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+#         'PORT': config('DB_PORT'),
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': config('DB_ENGINE'),
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
-    }
+    "default": dj_database_url.config(
+        default= config('DATABASE_URL'),
+    )
 }
 
 

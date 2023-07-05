@@ -19,6 +19,7 @@ from django.urls import path
 import jobs.views
 from django.conf import settings #imported the settings we are going to use
 from django.conf.urls.static import static #imported the settings we defined for our static url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns #we use this to send the url to our database
 
 #implemented the home path
 urlpatterns = [
@@ -30,3 +31,4 @@ urlpatterns = [
 ] 
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #We define the root for the static files we defined in settings
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += staticfiles_urlpatterns() #url of database we will send
