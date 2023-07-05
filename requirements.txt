@@ -1,0 +1,7 @@
+django
+python-decouple
+pillow
+psycopg2
+django django-embed-video
+dj-database-url
+gunicorn
