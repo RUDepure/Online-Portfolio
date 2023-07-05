@@ -136,7 +136,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') #This defines that we want the root for our base directory and a folder called "static"
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #This defines that we want the root for our base directory for our media files
+MEDIA_ROOT = BASE_DIR #This defines that we want the root for our base directory for our media files
 
 
 # Default primary key field type
